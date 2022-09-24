@@ -1,0 +1,230 @@
+/* Start General Section */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    appearance: none;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --color-white: #fff;
+    --color-light: #f0eff5;
+    --color-gray-light: #86848c;
+    --color-gray-dark: #56555e;
+    --color-dark: #27282f;
+    --color-primary: rgb(71, 7, 234);
+    --color-success: rgb(34, 202, 75);
+    --color-danger: rgb(255, 67, 54);
+    --color-warning: rgb(234, 7181, 7);
+    --color-purple: rgb(160, 99, 245);
+
+    --color-primary-light: rgba(71, 7, 234, 0.2);
+    --color-success-light: rgba(34, 202, 75, 0.2);
+    --color-danger-light: rgba(255, 67, 54, 0.2);
+    --color-purple-light: rgba(160, 99, 245, 0.2);
+
+    --card-padding: 1.6rem;
+    --padding-1: 1rem;
+    --padding-2: 8px;
+
+    --card-border-radius: 1.6rem;
+    --border-radius-1: 1rem;
+    --border-radius-2: 6px;
+}
+html{
+    font-size: 12px;
+}
+body{
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    min-height: 100vh;
+}
+h1{
+    font-size: 2.2rem !important
+}
+h2{
+    font-size: 1.5rem !important
+}
+h3{
+    font-size: 1.2rem !important
+}
+h4{
+    font-size: 1rem !important
+}
+h5{
+    font-size: 0.86rem !important;
+    font-weight: 600;
+}
+h6{
+    font-size: 0.76rem !important
+}
+p{
+    font-size: 0.86rem !important;
+    color: var(--color-gray-dark);
+}
+small{
+    font-weight: 300;
+    font-size: 0.77rem;
+}
+.primary{
+    color: var(--color-primary)
+}
+.success{
+    color: var(--color-success)
+}
+.danger{
+    color: var(--color-danger)
+}
+.purple{
+    color: var(--color-purple)
+}
+.bg-primary{
+    background-color: var(--color-primary);
+    box-shadow: 0 0.8rem 0.8rem var(--color-primary-light);
+}
+.bg-success{
+    background-color: var(--color-success);
+    box-shadow: 0 0.8rem 0.8rem var(--color-success-light);
+}
+.bg-danger{
+    background-color: var(--color-danger);
+    box-shadow: 0 0.8rem 0.8rem var(--color-danger-light);
+}
+.bg-purple{
+    background-color: var(--color-purple);
+    box-shadow: 0 0.8rem 0.8rem var(--color-purple-light);
+}
+.bg-dark{
+    background-color: #27282f;
+    box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+svg{
+    width: 18px;
+    height: 18px;
+}
+/* End General Section */
+
+/* Start Navbar Section */
+nav{
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--padding-1)
+}
+nav .container{
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+nav .container .logo{
+    width: 7rem;
+    cursor: pointer;
+}
+nav .search-bar{
+    background-color: var(--color-light);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: var(--padding-2) var(--card-padding);
+    color: var(--color-gray-light);
+    position: absolute;
+    left: 15%
+}
+nav .search-bar svg{
+    width: 18px;
+    fill: var(--color-gray-dark)
+}
+nav .search-bar input{
+    width: 100%;
+    background: transparent;
+    color: var(--color-dark);
+}
+nav .search-bar input::placeholder{
+    color: var(--color-gray-dark);
+}
+nav .profile-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem
+}
+nav .profile-area .theme-btn{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 5rem;
+    height: 2.4rem;
+    border-radius: var(--border-radius-2);
+    cursor: pointer;
+    overflow: hidden;
+}
+nav .profile-area .theme-btn span{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-radius: var(--border-radius-2);
+}
+nav .profile-area .theme-btn .active{
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-2);
+
+}
+nav .profile-area .theme-btn .active{
+    fill: var(--color-white);
+}
+nav .profile-area .theme-btn svg{
+    width: 20px;
+    height: 20px
+}
+nav .profile-area .profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+nav .profile .profile-avatar{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+nav .profile .more-icon{
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+nav .profile .more-icon svg{
+    fill: var(--color-dark);
+    width: 17px;
+    height: 17px;
+}
+nav button{
+    width: 25px;
+    height: 25px;
+    background-color: var(--color-light);
+    cursor: pointer;
+    border-radius: 4px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+nav button svg{
+    width: 20px !important;
+    height: 20px !important;
+    fill: var(--color-dark);
+}
+/* End Navbar Section */
