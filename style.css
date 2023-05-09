@@ -1,5 +1,5 @@
 /* Start General Section */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,8 @@
     list-style: none;
     text-decoration: none;
 }
-:root{
+
+:root {
     --color-white: #fff;
     --color-light: #f0eff5;
     --color-gray-light: #86848c;
@@ -35,90 +36,131 @@
     --border-radius-1: 1rem;
     --border-radius-2: 6px;
 }
-html{
+body.dark-theme{
+    --color-white: #131316;
+    --color-light: #23232a;
+    --color-dark: #ddd;
+    --color-gray-dark: #adacb5
+}
+html {
     font-size: 12px;
 }
-body{
+
+body {
     background-color: var(--color-light);
     color: var(--color-dark);
     min-height: 100vh;
 }
-h1{
+
+h1 {
     font-size: 2.2rem !important
 }
-h2{
+
+h2 {
     font-size: 1.5rem !important
 }
-h3{
+
+h3 {
     font-size: 1.2rem !important
 }
-h4{
+
+h4 {
     font-size: 1rem !important
 }
-h5{
+
+h5 {
     font-size: 0.86rem !important;
     font-weight: 600;
 }
-h6{
-    font-size: 0.76rem !important
+
+h6 {
+    font-size: 0.8rem !important
 }
-p{
-    font-size: 0.86rem !important;
+
+p {
+    font-size: 0.9rem !important;
     color: var(--color-gray-dark);
 }
-small{
+
+small {
     font-weight: 300;
     font-size: 0.77rem;
 }
-.primary{
+
+.primary {
     color: var(--color-primary)
 }
-.success{
+
+.success {
     color: var(--color-success)
 }
-.danger{
+
+.danger {
     color: var(--color-danger)
 }
-.purple{
+
+.purple {
     color: var(--color-purple)
 }
-.bg-primary{
+
+.bg-primary {
     background-color: var(--color-primary);
     box-shadow: 0 0.8rem 0.8rem var(--color-primary-light);
 }
-.bg-success{
+
+.bg-success {
     background-color: var(--color-success);
     box-shadow: 0 0.8rem 0.8rem var(--color-success-light);
 }
-.bg-danger{
+
+.bg-danger {
     background-color: var(--color-danger);
     box-shadow: 0 0.8rem 0.8rem var(--color-danger-light);
 }
-.bg-purple{
+
+.bg-purple {
     background-color: var(--color-purple);
     box-shadow: 0 0.8rem 0.8rem var(--color-purple-light);
 }
-.bg-dark{
+
+.bg-dark {
     background-color: #27282f;
     box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
 }
-img{
+.bg-primary-light{
+    background-color: var(--color-primary-light);
+}
+.bg-success-light{
+    background-color: var(--color-success-light);
+}
+.bg-danger-light{
+    background-color: var(--color-danger-light);
+}
+.bg-purple-light{
+    background-color: var(--color-purple-light);
+}
+img {
     width: 100%;
     object-fit: cover;
 }
-svg{
+
+svg {
     width: 18px;
+    min-width: 18px;
     height: 18px;
 }
+
 /* End General Section */
 
 /* Start Navbar Section */
-nav{
+nav {
     background-color: var(--color-white);
     width: 100%;
+    min-width: 100%;
     padding: var(--padding-1)
 }
-nav .container{
+
+nav .container {
     width: 96%;
     margin: 0 auto;
     display: flex;
@@ -126,11 +168,13 @@ nav .container{
     justify-content: space-between;
     position: relative;
 }
-nav .container .logo{
+
+nav .container .logo {
     width: 7rem;
     cursor: pointer;
 }
-nav .search-bar{
+
+nav .search-bar {
     background-color: var(--color-light);
     display: flex;
     align-items: center;
@@ -138,27 +182,33 @@ nav .search-bar{
     padding: var(--padding-2) var(--card-padding);
     color: var(--color-gray-light);
     position: absolute;
-    left: 15%
+    left: 15%;
+    width: 40%;
 }
-nav .search-bar svg{
+
+nav .search-bar svg {
     width: 18px;
     fill: var(--color-gray-dark)
 }
-nav .search-bar input{
+
+nav .search-bar input {
     width: 100%;
     background: transparent;
     color: var(--color-dark);
 }
-nav .search-bar input::placeholder{
+
+nav .search-bar input::placeholder {
     color: var(--color-gray-dark);
 }
-nav .profile-area{
+
+nav .profile-area {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 4rem
 }
-nav .profile-area .theme-btn{
+
+nav .profile-area .theme-btn {
     background-color: var(--color-light);
     display: flex;
     justify-content: space-between;
@@ -169,7 +219,8 @@ nav .profile-area .theme-btn{
     cursor: pointer;
     overflow: hidden;
 }
-nav .profile-area .theme-btn span{
+
+nav .profile-area .theme-btn span {
     display: block;
     display: flex;
     align-items: center;
@@ -178,41 +229,49 @@ nav .profile-area .theme-btn span{
     height: 100%;
     border-radius: var(--border-radius-2);
 }
-nav .profile-area .theme-btn .active{
+
+nav .profile-area .theme-btn .active {
     background-color: var(--color-dark);
     border-radius: var(--border-radius-2);
 
 }
-nav .profile-area .theme-btn .active{
+
+nav .profile-area .theme-btn .active {
     fill: var(--color-white);
 }
-nav .profile-area .theme-btn svg{
+
+nav .profile-area .theme-btn svg {
     width: 20px;
     height: 20px
 }
-nav .profile-area .profile{
+
+nav .profile-area .profile {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
 }
-nav .profile .profile-avatar{
+
+nav .profile .profile-avatar {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
     overflow: hidden;
 }
-nav .profile .more-icon{
+
+nav .profile .more-icon {
     width: 17px;
     height: 17px;
     cursor: pointer;
 }
-nav .profile .more-icon svg{
+
+nav .profile .more-icon svg {
     fill: var(--color-dark);
     width: 17px;
     height: 17px;
 }
-nav button{
+
+nav button {
     width: 25px;
     height: 25px;
     background-color: var(--color-light);
@@ -222,9 +281,434 @@ nav button{
     align-items: center;
     justify-content: center;
 }
-nav button svg{
+
+nav button svg {
     width: 20px !important;
     height: 20px !important;
     fill: var(--color-dark);
 }
+
 /* End Navbar Section */
+
+/* =================Start Main Section==================== */
+main {
+    display: grid;
+    grid-template-columns: 16rem auto 28rem;
+    gap: 2rem;
+    width: 96%;
+    margin: 1rem auto 4rem
+}
+
+/* Start Aside Section */
+main>aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 88vh;
+    position: relative;
+}
+main>aside .close-btn{
+    width: 25px !important;
+    height: 25px !important;
+    cursor: pointer;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    z-index: 2;
+    display: none;
+}
+main>aside .close-btn svg{
+    width: 25px !important;
+    height: 25px !important;
+    fill: var(--color-gray-dark)
+}
+main>aside .sidebar {
+    width: 100%;
+}
+
+main>aside .sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+    height: 4.2rem;
+    color: var(--color-gray-light);
+    position: relative;
+    padding: 0 3rem;
+    transition: 0.3s ease
+}
+
+main>aside .sidebar a.active {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    z-index: 1;
+}
+
+main>aside .sidebar a:hover {
+    color: var(--color-primary);
+}
+
+main>aside .sidebar a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 6px;
+    height: 100%;
+    background-color: var(--color-primary);
+}
+
+main>aside .sidebar a svg {
+    fill: var(--color-gray-light);
+    transition: 0.3s ease
+}
+
+main>aside .sidebar a:hover svg {
+    fill: var(--color-primary);
+    margin-left: -1.5rem;
+}
+
+main>aside .sidebar a.active svg {
+    fill: var(--color-primary);
+}
+
+main>aside .updates {
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-1);
+    padding: var(--card-padding);
+    width: 100%;
+}
+
+main>aside .updates svg {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+main>aside .updates h3 {
+    margin: 1rem 0;
+}
+
+main>aside .updates p {
+    margin: 0.5rem 0;
+}
+
+main>aside .updates a {
+    display: block;
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius-1);
+    padding: 0.8rem 0;
+    margin-top: 2rem;
+    transition: 0.3s ease;
+}
+
+main>aside .updates a:hover {
+    box-shadow: 0 1rem 2rem var(--color-primary-light);
+}
+
+/* End Aside Section */
+
+/* Start Middle Section */
+main section.middle .header {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+main section.middle .header input {
+    padding: 0.5rem 2rem;
+    border-radius: var(--border-radius-2);
+    color: var(--color-gray-dark);
+}
+
+main section.middle .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+section.middle .cards-container .card {
+    background: linear-gradient(#ff796f, #bd261b);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    color: var(--color-white);
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2rem 3rem var(--color-danger-light);
+    transition: 0.3s ease;
+}
+
+section.middle .cards-container .card:nth-child(2) {
+    background: linear-gradient(#7f8191, #27282f);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+section.middle .cards-container .card:nth-child(3) {
+    background: linear-gradient(#5d70ff, #5719c2);
+    box-shadow: 0 2rem 3rem var(--color-primary-light);
+}
+
+section.middle .cards-container .card:hover {
+    box-shadow: none;
+}
+
+section.middle .card .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.middle .card .top .left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+
+section.middle .card .top .left img {
+    width: 2.2rem;
+    border: 1px solid var(--color-white);
+    padding: 3px;
+    border-radius: 4px;
+}
+
+section.middle .card .top .left h2 {
+    font-weight: 500;
+}
+
+section.middle .card .top img.right {
+    width: 3.5rem;
+}
+
+section.middle .card .middle {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+section.middle .card .middle img.chip {
+    height: 2rem;
+    width: auto;
+}
+
+section.middle .card .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.middle .card .bottom .right {
+    display: flex;
+    align-items: center;
+    gap: 2rem
+}
+
+section.middle .reports {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+section.middle .reports .report p {
+    color: var(--color-gray-light);
+}
+
+section.middle .fast-payment {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem
+}
+
+section.middle .fast-payment .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+section.middle .fast-payment .badges .badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--color-white);
+    border-radius: 4px;
+    padding: 0.5rem var(--padding-1);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+section.middle .fast-payment .badges .badge span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+section.middle .fast-payment .badges .badge:hover {
+    box-shadow: 0 0 1.5rem var(--color-primary-light);
+}
+
+section.middle .fast-payment .badges .badge>div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+canvas#chart {
+    margin-top: 2rem;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+}
+
+/* End Middle Section */
+
+/* Start Right Section */
+section.right .investments {
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    margin-bottom: 2rem;
+}
+section.right .element .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--card-padding)
+}
+
+section.right .element .header .more {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-purple);
+    cursor: pointer;
+}
+
+section.right .element .header .more svg {
+    fill: var(--color-purple);
+}
+
+section.right .element .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-1) var(--card-padding);
+}
+section.right .investments .company {
+    border-bottom: 1px solid var(--color-light);
+    transition: 0.3s ease;
+}
+section.right .investments .company:last-child {
+    border: none
+}
+section.right .investments .company:hover{
+    background-color: var(--color-light);
+    cursor: pointer;
+}
+section.right .element .item>img {
+    width: 25px;
+}
+section.right .recent-transactions .item-icon{
+    display: block;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+section.right .recent-transactions .recent{
+    border-radius: var(--border-radius-2);
+    transition: 0.3s ease;
+}
+section.right .recent-transactions .recent:hover{
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+section.right .recent-transactions .item:nth-child(1) .item-icon path,
+section.right .recent-transactions .item:nth-child(2) .item-icon path{
+    fill: var(--color-purple)
+}
+section.right .recent-transactions .item:nth-child(3) .item-icon path{
+    fill: var(--color-success)
+}
+section.right .recent-transactions .item:nth-child(4) .item-icon path,
+section.right .recent-transactions .item:nth-child(5) .item-icon path{
+    fill: var(--color-danger)
+}
+section.right .recent .visa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2rem;
+    width: 3.8rem;
+    border-radius: var(--border-radius-2);
+}
+section.right .recent:nth-child(1) .visa,
+section.right .recent:nth-child(4) .visa{
+    background-color: #bd261b;
+}
+section.right .recent:nth-child(2) .visa,
+section.right .recent:nth-child(5) .visa{
+    background-color: #5719c2;
+}
+section.right .recent:nth-child(3) .visa{
+    background-color: #27282f;
+}
+section.right .recent .visa img{
+    width: 2.2rem
+}
+/* End Right Section */
+/* =================End Main Section================= */
+
+@media (max-width: 1024px) {
+    #menu-btn{
+        display: flex;
+        background-color: transparent;
+    }
+    nav .search-bar{
+        display: none;
+    }
+    nav .profile-area{
+        gap: 1.2rem
+    }
+    main{
+        grid-template-columns: auto 30rem;
+    }
+    main > aside{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        padding-top: 4rem;
+        background-color: var(--color-white);
+        height: 100vh;
+        transition: 0.3s ease;
+        box-shadow: 0.5rem 0 5rem var(--color-gray-light);
+    }
+    main > aside.active{
+        left: 0;
+    }
+    main > aside .close-btn{
+        display: block;
+    }
+    main > aside .updates{
+        display: none
+    }
+    .fast-payment{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media (max-width: 800px) {
+    main{
+        grid-template-columns: 1fr
+    }
+}
